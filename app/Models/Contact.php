@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contact extends Model
 {
-    use HasFactory;
+  use HasFactory;
 
-    protected $guarded = [];
+  protected $guarded = [];
 
-    public function account()
-    {
-
-    }
+  public function account()
+  {
+    return $this->belongsTo(Account::class);
+  }
 }
